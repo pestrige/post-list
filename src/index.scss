@@ -16,9 +16,13 @@ body {
   min-width: 320px;
   margin: 0;
   font-family: var(--font);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 140%;
   background-color: var(--background);
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 a {
