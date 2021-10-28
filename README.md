@@ -11,7 +11,7 @@
 - CSS Modules
  ---
 ### Ссылка на опубликованную версию:
-
+https://pestrige.github.io/post-list/
 
 ---
 ### Превью:
