@@ -1,0 +1,50 @@
+:root {
+  --font: 'Montserrat', sans-serif;
+  --background: #ECF1F7;
+  --primary: #3498DB;
+  --text: #34495E;
+  --fade: #BDC3C7;
+  --fade-dark: #7f8C8d;
+  --error: #E74C3C;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  font-family: var(--font);
+  font-size: 14px;
+  line-height: 140%;
+  background-color: var(--background);
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  min-width: 290px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media (min-width: 768px) {
+    padding: 0 30px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

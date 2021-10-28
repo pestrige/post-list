@@ -1,0 +1,47 @@
+.wrapper {
+  padding: 50px 0 0;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 640px) {
+    width: 400px;
+  }
+}
+
+.label {
+  width: 100%;
+  display: flex;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+  transition: outline-color 0.3s;
+  outline: 2px solid transparent;
+
+  &:focus-within {
+    outline: 2px solid var(--primary);
+  }
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border-right: 1px solid var(--fade);
+  border-radius: 5px 0 0 5px;
+  background-color: white;
+  background-image: url('./search.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+  cursor: pointer;
+}
+
+.input {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: var(--font);
+  color: var(--text);
+  font-size: 14px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  outline: none;
+}

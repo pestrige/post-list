@@ -1,0 +1,10 @@
+.main {
+  min-height: 100vh;
+  background-color: var(--background);
+}
+
+.error {
+  padding: 30px;
+  color: var(--error);
+  text-align: center;
+}
