@@ -11,19 +11,14 @@ export const searchTextSelector = ({data}: RootState) => data.searchText;
 
 export const getPostsWithUsers = createSelector(
   [postsSelector, usersSelector],
-  (posts: IPost[], users: IUser[]) => posts.map((post) => {
-    for (let i = 0; i < users.length; i++) {
-      if (users[i].id === post.userId) {
-        return {...post, name: users[i].name} as IFullPost;
-      }
-    }
-    return post as IFullPost;
-  })
-);
+  (posts: IPost[], users: IUser[]) => posts.map((post) => ({
+    ...post,
+    name: users.find(({id}) => id === post.userId)?.name || '',
+  } as IFullPost)));
 
 export const getFilteredPosts = createSelector(
   [getPostsWithUsers, searchTextSelector],
   (posts, text) => posts.filter(({name}) => {
-    return name ? name.toLowerCase().includes(text.toLowerCase()) : true;
+    return name.toLowerCase().includes(text.toLowerCase());
   }),
 );
